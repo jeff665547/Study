@@ -142,3 +142,4 @@ phiBahr<-function(x) return(1-exp(-x/2))
 phiLog<-function(x) return(log(1+x))
 phiFracA<-function(x) return(1-1/(1+x))
 phiFracB<-function(x) return(1-1/(1+x)^2)
+
