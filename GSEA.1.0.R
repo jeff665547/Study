@@ -1050,7 +1050,7 @@ write(paste("replace =", replace, sep=" "), file=filename, append=T)
           temp.desc[gs.count] <- gene.set.desc
           gs.count <- gs.count + 1
       } 
-      Ng <- gs.count - 1
+      Ng <<- gs.count - 1
       gs.names <- vector(length = Ng, mode = "character")
       gs.desc <- vector(length = Ng, mode = "character")
       size.G <- vector(length = Ng, mode = "numeric") 
