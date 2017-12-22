@@ -306,9 +306,12 @@ GSEA.EnrichmentScore <- function(gene.list, gene.set, weighted.score.type = 1, c
    correl.vector <- abs(correl.vector**alpha)
    sum.correl.tag    <- sum(correl.vector[tag.indicator == 1])
    norm.tag    <- 1.0/sum.correl.tag
-   norm.no.tag <- 1.0/Nm
-   RES <- cumsum(tag.indicator * correl.vector * norm.tag - no.tag.indicator * norm.no.tag)  
-   print(RES)
+   if(Nm == 0) {
+       norm.no.tag <- 0
+   } else {
+       norm.no.tag <- 1.0/Nm
+   }
+   RES <- cumsum(tag.indicator * correl.vector * norm.tag - no.tag.indicator * norm.no.tag) 
    max.ES <- max(RES)
    min.ES <- min(RES)
    if (max.ES > - min.ES) {
