@@ -1382,8 +1382,10 @@ if (OLD.GSEA == F) {
             }
          }
          pos.m <- mean(pos.phi)
-         neg.m <- mean(abs(neg.phi))
-
+	 if (!is.null(neg.phi)){
+	    neg.m <- mean(abs(neg.phi))
+	 }
+         
 #         if (Obs.ES[i] >= 0) {
 #            KS.size[i] <- which.min(abs(KS.mean.table - pos.m))
 #         } else {
@@ -1391,7 +1393,9 @@ if (OLD.GSEA == F) {
 #         }
 
          pos.phi <- pos.phi/pos.m
-         neg.phi <- neg.phi/neg.m
+	 if (!is.null(neg.phi)){
+	    neg.phi <- neg.phi/neg.m
+	 }
          for (j in 1:nperm) {
             if (phi[i, j] >= 0) {
                 phi.norm[i, j] <- phi[i, j]/pos.m
