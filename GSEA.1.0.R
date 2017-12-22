@@ -1049,7 +1049,7 @@ write(paste("replace =", replace, sep=" "), file=filename, append=T)
           temp.names[gs.count] <- gene.set.name
           temp.desc[gs.count] <- gene.set.desc
           gs.count <- gs.count + 1
-	  print(gs.count)
+	  
       } 
       Ng <<- gs.count - 1
       gs.names <- vector(length = Ng, mode = "character")
@@ -1061,7 +1061,8 @@ write(paste("replace =", replace, sep=" "), file=filename, append=T)
 
   N <- length(A[,1])
   Ns <- length(A[1,])
-
+	
+  print(gs.count)
   print(c("Number of genes:", N))
   print(c("Number of Gene Sets:", Ng))
   print(c("Number of samples:", Ns))
