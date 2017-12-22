@@ -1692,8 +1692,8 @@ if (output.directory != "")  {
 
      area.bias <- signif(100*(sum(obs.s2n[1:arg.correl]) + sum(obs.s2n[arg.correl:N]))/sum(abs(obs.s2n[1:N])), digits=3)
      area.phen <- ifelse(area.bias >= 0, phen1, phen2)
-     delta.string <- paste("Corr. Area Bias to \"", area.phen, "\" =", abs(area.bias), "\%", sep="", collapse="")
-     zero.crossing.string <- paste("Zero Crossing at location ", arg.correl, " (",  signif(100*arg.correl/N, digits=3), " \%)")
+     delta.string <- paste("Corr. Area Bias to \"", area.phen, "\" =", abs(area.bias), "\ %", sep="", collapse="")
+     zero.crossing.string <- paste("Zero Crossing at location ", arg.correl, " (",  signif(100*arg.correl/N, digits=3), " \ %)")
      leg.txt <- c(delta.string, zero.crossing.string)
      legend(x=N/10, y=max.corr, bty="n", bg = "white", legend=leg.txt, cex = 0.9)
 
