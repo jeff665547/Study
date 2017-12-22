@@ -2048,7 +2048,7 @@ if (output.directory != "")  {
       } # loop over gene sets
    
 #Turn off all the plots(jeff665547)  By jeff665547@NTU from line(1656) to line(2050)'
-
+print("Warning: Turn off all the plots by jeff665547!")
   return(list(report1 = report.phen1, report2 = report.phen2))
 
 }  # end of definition of GSEA.analysis
