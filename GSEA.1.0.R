@@ -1651,6 +1651,10 @@ if (output.directory != "")  {
        }
 }
 
+	
+#Turn off all the plots(jeff665547)
+'By jeff665547@NTU from line(1656) to line(2050) 	
+
 # Global plots
 
 if (output.directory != "")  {
@@ -2042,7 +2046,8 @@ if (output.directory != "")  {
         } # if p.vals thres
 
       } # loop over gene sets
-
+   
+#Turn off all the plots(jeff665547)  By jeff665547@NTU from line(1656) to line(2050)'
 
   return(list(report1 = report.phen1, report2 = report.phen2))
 
