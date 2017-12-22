@@ -2158,21 +2158,21 @@ GSEA.Analyze.Sets <- function(
    width = 17) {
 
    file.list <- list.files(directory)
-   files <- file.list[regexpr(pattern = "\.report\.", file.list) > 1]
+   files <- file.list[regexpr(pattern = " report ", file.list) > 1]
    max.sets <- length(files)
 
    set.table <- matrix(nrow = max.sets, ncol = 5)
 
    for (i in 1:max.sets) {
-      temp1 <-  strsplit(files[i], split="\.report\.")
-      temp2 <-  strsplit(temp1[[1]][1], split="\\.")
+      temp1 <-  strsplit(files[i], split=" report ")
+      temp2 <-  strsplit(temp1[[1]][1], split="\ ")
       s <- length(temp2[[1]])
       prefix.name <- paste(temp2[[1]][1:(s-1)], sep="", collapse="")
       set.name <- temp2[[1]][s]
-      temp3 <-  strsplit(temp1[[1]][2], split="\\.")
+      temp3 <-  strsplit(temp1[[1]][2], split="\ ")
       phenotype <- temp3[[1]][1]
       seq.number <- temp3[[1]][2]
-      dataset <- paste(temp2[[1]][1:(s-1)], sep="", collapse="\.")
+      dataset <- paste(temp2[[1]][1:(s-1)], sep="", collapse=" ")
 
       set.table[i, 1] <- files[i]
 
