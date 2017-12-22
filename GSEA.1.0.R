@@ -1622,7 +1622,7 @@ if (OLD.GSEA == F) {
        glob.p.vals.sorted <- signif(glob.p.vals.sorted, digits=5)
 
        report <- data.frame(cbind(gs.names, size.G, all.gs.descs, Obs.ES, Obs.ES.norm, p.vals[,1], FDR.mean.sorted, p.vals[,2], tag.frac, gene.frac, signal.strength, FDR.median.sorted, glob.p.vals.sorted))
-       names(report) <- c("GS", "SIZE", "SOURCE", "ES", "NES", "NOM p-val", "FDR q-val", "FWER p-val", "Tag \ %", "Gene \ %", "Signal", "FDR (median)", "glob.p.val")
+       names(report) <- c("GS", "SIZE", "SOURCE", "ES", "NES", "NOM p-val", "FDR q-val", "FWER p-val", "Tag (%) ", "Gene (%) ", "Signal", "FDR (median)", "glob.p.val")
 #       print(report)
        report2 <- report
        report.index2 <- order(Obs.ES.norm, decreasing=T)
